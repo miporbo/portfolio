@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Theme flash আটকানোর জন্য — page load হওয়ার আগেই theme বসিয়ে দেয় -->
   <script>
     (function () {
       const t = localStorage.getItem("theme") || "dark";
@@ -14,6 +13,10 @@
 
   <title>Md. Majharul Islam Porbo | Python Developer</title>
   <meta name="description" content="Futuristic Python developer portfolio — backend, automation, APIs." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@500;700;800&display=swap" rel="stylesheet" />
@@ -48,6 +51,7 @@
   </header>
 
   <main id="top">
+    <!-- HERO SECTION -->
     <section class="hero">
       <div class="hero-copy">
         <p class="kicker">import future</p>
@@ -91,6 +95,12 @@
     me = Engineer()
     print(me.mission())</code></pre>
       </aside>
+
+      <!-- Scroll down indicator -->
+      <a href="#about" class="scroll-down" aria-label="Scroll down">
+        <span class="mouse"><span class="wheel"></span></span>
+        <span class="scroll-text">scroll</span>
+      </a>
     </section>
 
     <section id="about" class="section">
@@ -134,24 +144,64 @@
       <p class="idx">03 // WORK</p>
       <h2>Selected executions.</h2>
       <div class="cards">
-        <article class="card">
-          <p class="tag">python · cli</p>
+
+        <!-- Project 1 -->
+        <article class="card project">
+          <div class="card-top">
+            <span class="card-num">01</span>
+            <span class="pstatus live"><i></i> LIVE</span>
+          </div>
+          <div class="card-icon">📊</div>
           <h3>Grade Calculator</h3>
           <p>A CLI tool that takes subject marks, calculates the average, and assigns a grade (A+ to F) based on performance.</p>
-          <a href="https://github.com/miporbo/Python-Projects/tree/main/Grade-Calculator" target="_blank" rel="noopener">source →</a>
+          <ul class="tech">
+            <li>Python</li>
+            <li>CLI</li>
+            <li>if / elif</li>
+          </ul>
+          <div class="card-links">
+            <a href="https://github.com/miporbo/python-projects/tree/main/Grade-Calculator" target="_blank" rel="noopener">source →</a>
+          </div>
         </article>
-        <article class="card draft">
-          <p class="tag">python · planned <span class="badge">SOON</span></p>
-          <h3>Project Nova</h3>
-          <p>An idea in the pipeline. Details coming once development starts.</p>
-          <a href="https://github.com/miporbo" target="_blank" rel="noopener">check github →</a>
+
+        <!-- Project 2 -->
+        <article class="card project draft">
+          <div class="card-top">
+            <span class="card-num">02</span>
+            <span class="pstatus wip"><i></i> BUILDING</span>
+          </div>
+          <div class="card-icon">🎯</div>
+          <h3>Quiz Game</h3>
+          <p>Interactive terminal quiz with multiple questions and live score tracking. Currently in development.</p>
+          <ul class="tech">
+            <li>Python</li>
+            <li>Dictionary</li>
+            <li>Loops</li>
+          </ul>
+          <div class="card-links">
+            <a href="https://github.com/miporbo/python-projects" target="_blank" rel="noopener">repo →</a>
+          </div>
         </article>
-        <article class="card draft">
-          <p class="tag">python · planned <span class="badge">SOON</span></p>
-          <h3>Project Pulse</h3>
-          <p>Reserved slot for the next build. Stay tuned.</p>
-          <a href="https://github.com/miporbo" target="_blank" rel="noopener">check github →</a>
+
+        <!-- Project 3 -->
+        <article class="card project draft">
+          <div class="card-top">
+            <span class="card-num">03</span>
+            <span class="pstatus"><i></i> PLANNED</span>
+          </div>
+          <div class="card-icon">✅</div>
+          <h3>To-Do App</h3>
+          <p>Terminal-based task manager to add, view and delete tasks. Coming after the quiz game.</p>
+          <ul class="tech">
+            <li>Python</li>
+            <li>Functions</li>
+            <li>File I/O</li>
+          </ul>
+          <div class="card-links">
+            <a href="https://github.com/miporbo/python-projects" target="_blank" rel="noopener">repo →</a>
+          </div>
         </article>
+
       </div>
     </section>
 
@@ -182,6 +232,9 @@
     <p>© <span id="y"></span> Md. Majharul Islam Porbo · compiled with Python energy</p>
     <p class="tiny">PY-OS interface · built by miporbo</p>
   </footer>
+
+  <!-- Back to top button -->
+  <button id="to-top" class="to-top" aria-label="Back to top">↑</button>
 
   <script src="script.js"></script>
 </body>

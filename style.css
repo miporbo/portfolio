@@ -281,9 +281,11 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); margin-bottom: 22px; }
 .pstatus.wip i { background: var(--yellow); animation: blink 1.2s infinite; }
 
 .card-icon {
-  width: 46px; height: 46px; display: grid; place-items: center;
-  border: 1px solid var(--line); background: rgba(0,240,255,.05);
-  font-size: 20px; margin-bottom: 16px; transition: .3s ease;
+  color: var(--accent); 
+}
+
+.card-icon svg {
+  display: block;
 }
 .card.project:hover .card-icon {
   border-color: var(--cyan); box-shadow: 0 0 18px rgba(0,240,255,.25);

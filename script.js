@@ -13,6 +13,37 @@ themeBtn?.addEventListener("click", () => {
   localStorage.setItem("theme", next);
 });
 
+/* ---------- MOBILE MENU: লিংকে ক্লিক করলে মেনু বন্ধ ---------- */
+const navToggle = document.getElementById("nav-toggle");
+document.querySelectorAll(".nav nav a").forEach((link) => {
+  link.addEventListener("click", () => {
+    if (navToggle) navToggle.checked = false;
+  });
+});
+
+/* ---------- BACK TO TOP + SCROLL INDICATOR ---------- */
+const toTop = document.getElementById("to-top");
+const scrollDown = document.querySelector(".scroll-down");
+
+window.addEventListener("scroll", () => {
+  const y = window.scrollY;
+  toTop?.classList.toggle("show", y > 400);
+  scrollDown?.classList.toggle("hide", y > 80);
+});
+
+toTop?.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+/* ---------- PROJECT CARD GLOW (মাউস ফলো করে) ---------- */
+document.querySelectorAll(".card.project").forEach((card) => {
+  card.addEventListener("mousemove", (e) => {
+    const r = card.getBoundingClientRect();
+    card.style.setProperty("--x", e.clientX - r.left + "px");
+    card.style.setProperty("--y", e.clientY - r.top + "px");
+  });
+});
+
 /* ---------- CUSTOM CURSOR ---------- */
 if (window.matchMedia("(pointer: fine)").matches) {
   document.body.classList.add("cursor-enabled");
@@ -42,7 +73,7 @@ if (window.matchMedia("(pointer: fine)").matches) {
   }
   animateRing();
 
-  document.querySelectorAll("a, button, label, input").forEach((el) => {
+  document.querySelectorAll("a, button, label, input, .card.project").forEach((el) => {
     el.addEventListener("mouseenter", () => ring.classList.add("hovered"));
     el.addEventListener("mouseleave", () => ring.classList.remove("hovered"));
   });
@@ -86,4 +117,4 @@ if (typedEl) {
   }
 
   type();
-}s
+}

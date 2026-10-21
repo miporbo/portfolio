@@ -434,3 +434,16 @@ body.cursor-enabled label, body.cursor-enabled input { cursor: none; }
     }
 }
 
+/* Keep project card hover effects with scroll reveal */
+
+.card.project.reveal {
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.card.project.reveal.visible:hover {
+    transform: translateY(-6px);
+}

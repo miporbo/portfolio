@@ -284,13 +284,15 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); margin-bottom: 22px; }
   color: var(--accent); 
 }
 
+.card-icon {
+  color: var(--accent); 
+}
+
 .card-icon svg {
   display: block;
 }
-.card.project:hover .card-icon {
-  border-color: var(--cyan); box-shadow: 0 0 18px rgba(0,240,255,.25);
-  transform: rotate(-6deg) scale(1.05);
-}
+.card-icon { transition: color .3s ease; }
+.card.project:hover .card-icon { color: var(--cyan); }
 
 .tech { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
 .tech li {

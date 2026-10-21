@@ -120,6 +120,7 @@ if (typedEl) {
 }
 
 
+
 /* ===== Scroll Reveal Animation ===== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -133,11 +134,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const revealObserver = new IntersectionObserver(
-        (entries, observer) => {
+        (entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add("visible");
-                    observer.unobserve(entry.target);
+                } else {
+                    entry.target.classList.remove("visible");
                 }
             });
         },
@@ -151,4 +153,5 @@ document.addEventListener("DOMContentLoaded", () => {
         revealObserver.observe(element);
     });
 });
+
 

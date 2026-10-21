@@ -450,3 +450,18 @@ body.cursor-enabled label, body.cursor-enabled input { cursor: none; }
 .card.project.reveal.visible:hover {
     transform: translateY(-6px);
 }
+
+/* ===== Hero fits the screen ===== */
+.hero {
+  min-height: calc(100vh - 56px);
+  min-height: calc(100dvh - 56px);
+  padding-top: 32px;
+  padding-bottom: 96px;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, min(4.5vw, 7.5vh), 4.2rem);
+}
+
+.hero .lead { margin-top: 12px; }
+.hero .cta { margin-top: 20px; }

@@ -281,18 +281,19 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); margin-bottom: 22px; }
 .pstatus.wip i { background: var(--yellow); animation: blink 1.2s infinite; }
 
 .card-icon {
-  color: var(--accent); 
+  display: block;
+  width: 26px;
+  height: 26px;
+  margin-bottom: 14px;
+  color: var(--muted);
+  transition: color .3s ease;
 }
-
-.card-icon {
-  color: var(--accent); 
-}
-
 .card-icon svg {
   display: block;
 }
-.card-icon { transition: color .3s ease; }
-.card.project:hover .card-icon { color: var(--cyan); }
+.card.project:hover .card-icon {
+  color: var(--cyan);
+}
 
 .tech { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
 .tech li {

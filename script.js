@@ -266,35 +266,45 @@ const projectDetails = {
   },
 
   "todo-app": {
-    kicker: "PROJECT 03 // PLANNED",
-
-    title: "To-Do App",
-
-    description:
-      "A planned command-line task manager for adding, viewing, and deleting tasks. Development has not started yet.",
-
-    features: [
-      "Planned: Add a task.",
-      "Planned: View saved tasks.",
-      "Planned: Delete a task."
-    ],
-
-    learning: [
-      "Planned: Using lists and functions.",
-      "Planned: Working with loops and conditions.",
-      "Planned: Learning file handling to save tasks."
-    ],
-
-    sample:
-      "To-Do App\n" +
-      "Status: Planned\n" +
-      "Development has not started yet.",
-
-    sourceUrl:
-      "https://github.com/miporbo/python-projects",
-
-    sourceLabel: "View project repository"
-  }
+  kicker: "PROJECT 03 // LIVE",
+  title: "To-Do App",
+  description:
+    "A Python command-line task manager with a menu for adding, viewing, and deleting tasks. Tasks are saved to a text file, so they are still there the next time the program runs.",
+  features: [
+    "Menu-based interface: add, view, delete, or exit.",
+    "Shows tasks with numbers (1, 2, 3...).",
+    "Deletes a task by its number.",
+    "Handles invalid input without crashing.",
+    "Saves tasks to a text file and loads them on start."
+  ],
+  learning: [
+    "Storing tasks in a list.",
+    "Organizing code with functions.",
+    "Using a while loop to keep a menu running.",
+    "Handling errors with try and except.",
+    "Reading and writing text files."
+  ],
+  sample:
+    "To-Do List Application\n" +
+    "1. Add Task\n" +
+    "2. View Tasks\n" +
+    "3. Delete Task\n" +
+    "4. Exit\n" +
+    "Enter your choice (1-4): 1\n" +
+    "Enter a new task: Buy milk\n" +
+    "Task added successfully!\n" +
+    "\n" +
+    "Enter your choice (1-4): 2\n" +
+    "Your tasks:\n" +
+    "1. Buy milk\n" +
+    "\n" +
+    "Enter your choice (1-4): 4\n" +
+    "Tasks saved to tasks.txt\n" +
+    "Exiting the application. Goodbye!",
+  sourceUrl:
+    "https://github.com/miporbo/python-projects/tree/main/TO%20DO%20APP",
+  sourceLabel: "View source code"
+}
 };
 
 

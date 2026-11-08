@@ -1316,3 +1316,81 @@ body.cursor-enabled input {
     transform: none;
   }
 }
+
+/* ===== Projects carousel ===== */
+.carousel-track {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 10px 0 18px;
+  scrollbar-width: none;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-track .card {
+  flex: 0 0 calc((100% - 36px) / 3);
+  min-width: 0;
+  scroll-snap-align: start;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.carousel-count {
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: .14em;
+}
+
+.carousel-nav {
+  display: flex;
+  gap: 10px;
+}
+
+.carousel-btn {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--cyan);
+  background: var(--card);
+  color: var(--cyan);
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: background .2s ease, color .2s ease, box-shadow .2s ease, opacity .2s ease;
+}
+
+.carousel-btn:hover:not(:disabled) {
+  background: var(--cyan);
+  color: var(--bg);
+  box-shadow: 0 0 24px rgba(0,240,255,.45);
+}
+
+.carousel-btn:disabled {
+  opacity: .35;
+  cursor: not-allowed;
+  border-color: var(--line);
+  color: var(--muted);
+}
+
+@media (max-width: 900px) {
+  .carousel-track .card {
+    flex-basis: 86%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel-track {
+    scroll-behavior: auto;
+  }
+}
